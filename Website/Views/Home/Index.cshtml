@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<img src="~/Content/pottery.jpg" alt="Pottery" height="400" width="1100" />
+<h1 style="text-align:center"><b>Jimbo's Pottery</b></h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Hand Crafted</h2>
+        <p>
+            Jimbo makes his pottery by hand, on his West Virginia ranch.  The same way his grandpapi taught him during the summer of 69'.
+        </p>
+        @Html.ActionLink("Commision A Piece", "Buy", null, new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-4">
+        <h2>One of a Kind</h2>
+        <p>Because Jimbo makes his pieces by hand, no two pieces are the same.  None of the fancy big city slicker machinery here.  Just good ole' elbow grease and tabacci smoke.</p>
+        @Html.ActionLink("View The Gallery", "Gallery", null, new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-4">
+        <h2>Visit Jimbo</h2>
+        <p>Jimbo loves visitors, and so does his dog!  Contact Jimbo and set up a time to come on by, sip some moonshine, and see art in action!</p>
+        @Html.ActionLink("Contact Jimbo", "Contact", null, new { @class = "btn btn-primary" })
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<script type="text/javascript">
+    function handleForm() {
+        alert('Jimbo will contact you shortly!');
+        window.location.href('../home/index');
+    }
+</script>
+
+<div class="row">
+    <h1>Contact Jimbo</h1>
+</div>
+<div class="row">
+    <h3>Use the following form to contact Jimbo!  All fields are required.</h3>
+</div>
+<div class="row">
+    <form method="get" action="javascript:handleForm()">
+        <div class="row">
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="description">You're Message</label>
+                <input type="text" class="form-control" id="description">
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+</div>

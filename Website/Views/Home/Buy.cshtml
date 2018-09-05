@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    function handleForm() {
+        if (handleRequired()) {
+            alert('Jimbo has recieved your request and will contact you shortly!');
+            window.location.href('../home/index');
+        }
+        else {
+            alert('All fields are required!');
+        }
+    }
+
+    function handleRequired() {
+        if (document.getElementById('email').value === '') {
+            return false;
+        }
+        if (document.getElementById('name').value === '') {
+            return false;
+        }
+        if (document.getElementById('description').value === '') {
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<div class="row">
+    <h1>Commision A Piece of Art</h1>
+</div>
+<div class="row">
+    <h3>Use the following form to commision a piece of art.  All fields are required.</h3>
+</div>
+<div class="row">
+    <form method="get" action="javascript:handleForm()">
+        <div class="row">
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="name">Your name:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label for="description">Quick Description:</label>
+                <input type="text" class="form-control" id="description">
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+</div>
